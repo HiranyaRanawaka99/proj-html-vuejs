@@ -1,5 +1,7 @@
 <script>
 
+import AppHeader 
+
 export default {
   data()  {
     return {}
