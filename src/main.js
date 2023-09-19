@@ -12,7 +12,9 @@ library.add(faUserSecret)
 
 //   <font-awesome-icon icon="fa-solid fa-user-secret" />
 
+// FONT SOURCE
+import '@fontsource/poppins';
 
-const app = createApp(App)
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+const app = createApp(App);
+app.component('font-awesome-icon', FontAwesomeIcon)
 app.mount('#app')
