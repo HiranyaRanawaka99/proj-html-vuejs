@@ -14,7 +14,9 @@ export default {
     <section class="contact-us">
         <h2>Want to work with us? Send us<em> a message!</em></h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus alias optio repellat velit dignissimos sed doloremque rem perspiciatis porro illo ipsa, quibusdam distinctio inventore autem ad eos error, numquam eligendi.</p>
-        <button class="btn-contact">CONTACT</button>
+        <button class="btn-contact">CONTACT
+            <div class="hover-circle"></div>
+        </button>
     </section>
 </div>
 
@@ -42,6 +44,34 @@ export default {
         border: none;
         background-color: $contact-btn;
         padding: .3rem 2.5rem;
+
+        position: relative;
+
+
+        &:hover {
+            background-color: $contact-btn-hover;
+            padding: .3rem 2.5rem 0 2.5rem;
+        }
+
+        .hover-circle {
+            display: none;
+
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+
+            background-color: $hover-cicle;
+
+            position: relative;
+            left: 70px;
+            bottom: 5px;
+            padding: 0;
+            margin: -0.16rem;
+        }
+
+        &:hover .hover-circle {
+            display: block;
+        }
     }
 }
 

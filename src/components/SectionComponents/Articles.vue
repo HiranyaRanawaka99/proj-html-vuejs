@@ -38,7 +38,7 @@ export default {
 
 <template>
   <section class="articles">
-    <card v-for="article in articles" class="article-card">
+    <div v-for="article in articles" class="article-card">
       <a :href=article.url>
         <div class="date">
           <div class="date-number"> {{ article.dateNumber }}</div>
@@ -52,7 +52,7 @@ export default {
           <p><em> {{ article.author }} </em></p>
         </div>
        </a>
-    </card>
+      </div>
   </section>
 
 

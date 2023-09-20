@@ -1,9 +1,9 @@
 <script>
-import {store} from './data/store';
-
+import {store} from '../components/data/store';
 export default {
   data()  {
     return {
+      store,
       links: [
         {
             text: 'Home',
@@ -41,9 +41,10 @@ export default {
 <template>
 
   <div class="header-container">
-    <div class="logo">
-      <img src="../assets/img/logo-sidearea-1.png" alt="Marée-logo">
-      <!-- <img :src="store.image" alt="Marée-logo"> -->
+    <div v-for="logo in store.logoInfo"
+    class="logo">
+      <!-- <img src="../assets/img/logo-sidearea-1.png" alt="Marée-logo"> -->
+      <img :src="logo.logoImage" :alt="store.logoInfo.alt">
      </div>
      <div class="navbar">
       <ul class="links">
@@ -52,8 +53,6 @@ export default {
       <img src="../assets/svg/svg-1.svg">
     </div>
     </div>
-
-
 </template>
 
 

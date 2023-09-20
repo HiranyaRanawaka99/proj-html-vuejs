@@ -1,8 +1,10 @@
 <script>
+import { store } from './data/store';
 
 export default {
   data()  {
     return {
+    store,
     footerInfo: [
         {
           logoImage: '/src/assets/img/logo-sidearea-1.png',
@@ -22,23 +24,24 @@ export default {
 
 <template>
   <div class="footer">
-    <section v-for="info in footerInfo" class="footer-info">
-      <div class="logo">
-        <img :src="info.logoImage">
-        <p> {{ info.logoCaption }}</p>
-    </div>
-    <div class="contacts">
-      <p> {{ info.email }}</p>
-      <p> {{ info.phoneNum }}</p>
-    </div>
-    <div class="adress">
-      <p> {{ info.adress }}</p>
-      <p> {{ info.postalCode }}</p>
-    </div>
-    <div class="socials">
-      
-    </div>
-      
+    <section 
+      v-for="info in footerInfo" 
+      class="Infos">
+      <div v-for="logo in store.logoInfo">
+        <img :src="logo.logoImage">
+        <p> {{ logo.logoText }}</p>
+      </div>
+      <div class="contacts">
+        <p> {{ info.email }}</p>
+        <p> {{ info.phoneNum }}</p>
+      </div>
+      <div class="adress">
+        <p> {{ info.adress }}</p>
+        <p> {{ info.postalCode }}</p>
+      </div>
+      <div class="socials">
+        
+      </div>  
     </section>
   </div>
 
@@ -54,10 +57,10 @@ export default {
   background-color: $footer-bg;
   padding:  2rem;
 
-  .footer-info {
+  .Infos {
     display: flex;
     justify-content: space-between;
-    justify-content: center;
+    align-items: center;
   }
 }
 
