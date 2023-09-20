@@ -6,9 +6,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 // FONTAWESOME
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft, faAngleRight, faLightbulb, faCloud, faPenClip } from '@fortawesome/free-solid-svg-icons'
+import { faComment } from '@fortawesome/free-regular-svg-icons'
 //add icons to the library
-library.add(faAngleLeft, faAngleRight)
+library.add(faAngleLeft, faAngleRight, faLightbulb, faCloud, faComment, faPenClip)
 
 //   <font-awesome-icon icon="fa-solid fa-user-secret" />
 

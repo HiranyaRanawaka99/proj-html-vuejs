@@ -1,13 +1,14 @@
 <script>
 import Slider from './SectionComponents/Slider.vue';
 import Jumbotron from './SectionComponents/Jumbotron.vue';
+import WorkingProcess from './SectionComponents/WorkingProcess.vue';
 
 export default {
   data()  {
     return {}
   },
 
-  components: { Slider,Jumbotron }
+  components: { Slider,Jumbotron, WorkingProcess }
 }
 
 </script>
@@ -17,6 +18,7 @@ export default {
 
   <Slider></Slider>
   <Jumbotron></Jumbotron>
+  <WorkingProcess></WorkingProcess>
 
 
 </template>

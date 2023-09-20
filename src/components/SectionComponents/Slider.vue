@@ -13,7 +13,7 @@ export default {
 
 <template>
 
-    <div class="slider-container">
+<section class="slider-container">
     <button class="btn left">  <font-awesome-icon icon="fa-solid fa-angle-left" />  </button>
     <button class="btn right"> 	 <font-awesome-icon icon="fa-solid fa-angle-right" /> </button>
 
@@ -43,7 +43,7 @@ export default {
                 <div class="mini l-bottom"><img src="../../assets/img/h-2-slider-img-17.png"></div>
         </div>
     </div>
-</div>
+</section>
 
 </template>
 
@@ -55,7 +55,6 @@ export default {
 
 .slider-container {
     position: relative;
-    margin: 2rem 7rem;
     .btn {
         border: none;
         border-radius: 50%;
