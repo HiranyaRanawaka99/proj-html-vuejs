@@ -1,14 +1,14 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import Bootstrap from '../node_modules/bootstrap/scss/bootstrap.scss'
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 // FONTAWESOME
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 //add icons to the library
-library.add(faUserSecret)
+library.add(faAngleLeft, faAngleRight)
 
 //   <font-awesome-icon icon="fa-solid fa-user-secret" />
 

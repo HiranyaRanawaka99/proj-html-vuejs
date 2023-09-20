@@ -43,6 +43,7 @@ export default {
   <div class="header-container">
     <div class="logo">
       <img src="../assets/img/logo-sidearea-1.png" alt="Marée-logo">
+      <!-- <img :src="store.image" alt="Marée-logo"> -->
      </div>
      <div class="navbar">
       <ul class="links">
@@ -85,6 +86,7 @@ export default {
 
   img {
     align-self: start;
+    width: 20px;
   }
 }
   
