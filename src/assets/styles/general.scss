@@ -2,20 +2,22 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+
+    section {
+        margin: 2rem 7rem;
+    }
+
     ul {
         list-style-type: none;
-        a {
-            text-decoration: none;
-            color: $text-black;
-        }
+    }
+    
+    a {
+        text-decoration: none;
+        color: $text-black;
     }
 
     img {
         width: 100%;
-    }
-
-    section {
-        margin: 2rem 7rem;
     }
     
 }
