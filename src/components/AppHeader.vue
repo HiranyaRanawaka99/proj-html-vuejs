@@ -40,18 +40,16 @@ export default {
 <template>
 
   <div class="header-container">
-    <div v-for="logo in store.logoInfo"
-    class="logo">
-      <!-- <img src="../assets/img/logo-sidearea-1.png" alt="Marée-logo"> -->
+    <div v-for="logo in store.logoInfo" class="logo">
       <img :src="logo.logoImage" :alt="store.logoInfo.alt">
-     </div>
-     <div class="navbar">
+    </div>
+    <div class="navbar">
       <ul class="links">
         <li v-for="link in links"> <a :href= link.url>{{ link.text.toUpperCase() }} </a> </li>
       </ul>
-      <img src="../assets/svg/svg-1.svg">
+      <img src="../assets/svg/svg-1.svg" class="navbar-menu" alt="navbar-menu">
     </div>
-    </div>
+  </div>
 </template>
 
 
@@ -74,7 +72,7 @@ export default {
   .links {
     display: flex;
     align-items: center;
-    gap:.5rem;
+    gap:1.5rem;
 
     li:hover {
       background: linear-gradient(to bottom, transparent 50%, $highlighter 40%, );
@@ -85,6 +83,14 @@ export default {
   img {
     align-self: start;
     width: 20px;
+  }
+}
+
+// RESPONSIVE
+
+@media screen and (max-width:768px) {
+  .navbar > .links {
+    display: none;
   }
 }
   
