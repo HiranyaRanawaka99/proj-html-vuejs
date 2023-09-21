@@ -5,7 +5,7 @@ export const store = reactive({
     logoInfo: [
         {
             logoImage: '/src/assets/img/logo-sidearea-1.png',
-            logoText: 'Let\'s get started',
+            logoText: 'Let\'s get Creative',
             alt: 'marée-logo',
         },
 

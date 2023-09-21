@@ -29,7 +29,7 @@ export default {
       class="Infos">
       <div v-for="logo in store.logoInfo">
         <img :src="logo.logoImage">
-        <p> {{ logo.logoText }}</p>
+        <p> <b> {{ logo.logoText }} </b></p>
       </div>
       <div class="contacts">
         <p> {{ info.email }}</p>
@@ -40,7 +40,10 @@ export default {
         <p> {{ info.postalCode }}</p>
       </div>
       <div class="socials">
-        
+        <a href="#"><font-awesome-icon icon="fa-brands fa-twitter" />
+   </a>     <a href="#"><font-awesome-icon icon="fa-brands fa-pinterest-p" /></a>
+        <a href="#"><font-awesome-icon icon="fa-brands fa-facebook-f" />
+</a>        <a href="#"><font-awesome-icon icon="fa-brands fa-linkedin-in" /></a>
       </div>  
     </section>
   </div>
@@ -62,7 +65,27 @@ export default {
     justify-content: space-between;
     align-items: center;
   }
+  .socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 
+@media screen and (max-width:768px) {
+
+  .footer {
+  padding: 1rem;
+  .Infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    font-size: small;
+  }
+}
+}
 
 </style>
