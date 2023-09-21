@@ -35,6 +35,7 @@ export default {
           active: false,
         },
       ],
+      hoverBook: 'hoverBook',
     }
   },
 }
@@ -45,8 +46,8 @@ export default {
 <template>
 
 <div class="jumbotron g-0 row row-cols-2 row-cols-md-3 row-cols-lg-3">
-  <div v-for="jumboImage in jumboImages">
-    <img :src="jumboImage.image" :alt="jumboImage.alt">
+  <div v-for="(jumboImage, index) in jumboImages">
+      <img :src="jumboImage.image" :alt="jumboImage.alt">
   </div>
 
 </div>
@@ -57,6 +58,15 @@ export default {
 
 <style lang="scss" scoped>
 @use '../../assets/styles/general.scss';
+
+#book {
+  display: none;
+}
+#book:hover .hoverBook {
+  display: block;
+  z-index: 999;
+
+}
 
 
 </style>

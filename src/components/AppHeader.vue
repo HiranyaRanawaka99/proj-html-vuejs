@@ -28,11 +28,10 @@ export default {
         {
             text: 'Elements',
             url: '#',
-        },
-        ],
+        }
+      ]
     }
   },
-
 }
 </script>
 
