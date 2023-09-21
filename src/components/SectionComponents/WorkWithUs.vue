@@ -15,6 +15,7 @@ export default {
 
     // COMPONENTS
     components: { BaseButton }
+    
 }
 
 </script>
