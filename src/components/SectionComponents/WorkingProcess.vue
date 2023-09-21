@@ -119,13 +119,14 @@ export default {
      }
      .working-process {
        display: flex;
+       align-items: center;
        gap: 2rem; 
       }
       .process-icons {
         background-image: none;
         display: block !important;
         > * {
-          margin-bottom: 2rem;
+          margin-bottom: 1rem;
         }
       }
       .process-paragraph {
