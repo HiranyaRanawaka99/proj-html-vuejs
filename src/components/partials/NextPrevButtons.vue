@@ -81,7 +81,7 @@ top: 120px;
     }
 
     .btn-next {
-        left: 1050px;
+        left: 400px;
     }
 }
 
