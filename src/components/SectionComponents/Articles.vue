@@ -41,7 +41,7 @@ export default {
     <div v-for="article in articles" class="article-card">
       <a :href=article.url>
         <div class="date">
-          <div class="date-number"> {{ article.dateNumber }}</div>
+          <div class="date-number"> <em>{{ article.dateNumber }} </em></div>
           <div class="date-month"> {{ article.dateMonth.toUpperCase() }}</div>
         </div>
       <div class="card-top">
@@ -80,16 +80,27 @@ export default {
       top: -15px;
 
       font-size: 1.5rem;
-      padding: 0.1rem 1.3rem;
+      padding: 0.1rem 1.38rem;
       
     }
     .date-month {
       background-color: $article-month;
       top:20px;
       padding: 0.5rem 0.3rem
-    }
-      
+    }  
   }
+}
+
+@media screen and (max-width:768px) {
+  .articles {
+  display: block;
+
+  .article-card {
+    margin-bottom: 2.5rem;
+  }
+}
+
+
 }
 
 
