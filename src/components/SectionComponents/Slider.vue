@@ -46,9 +46,6 @@ export default {
             this.activeSlide--
         }
     },
-},
-// COMPUTED
-computed: {
     autoPlayFunction () {
         this.autoplay = setInterval (() => {
             this.handleNext()
@@ -58,13 +55,14 @@ computed: {
     stopAutoPlayFunction () {
         clearInterval(this.autoplay)
     },
- },
+},
+
+// COMPONENTS
 components: {NextPrevButtons}
 }
 
 
 
-  // COMPONENTS
 
 </script>
 

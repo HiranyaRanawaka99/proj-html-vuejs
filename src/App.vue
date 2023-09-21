@@ -1,4 +1,5 @@
 <script>
+import AppLoader from './components/AppLoader.vue';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
@@ -6,20 +7,23 @@ import AppFooter from './components/AppFooter.vue';
 
 export default {
   data()  {
-    return {}
+    return {
+      isLoading: false,
+    }
   },
 
 
   // COMPONENTS
-  components: {AppHeader, AppMain, AppFooter}
+  components: { AppLoader, AppHeader, AppMain, AppFooter}
 }
 </script>
 
-
-
-
 <template>
   <div class="wrapper">
+    <AppLoader
+      v-if="isLoading"
+      loadingText="Example loading text"
+    ></AppLoader>
     <AppHeader></AppHeader>
     <AppMain></AppMain>
     <AppFooter></AppFooter>
