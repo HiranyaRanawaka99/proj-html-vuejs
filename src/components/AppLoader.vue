@@ -26,14 +26,18 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: $footer-bg;
-    backdrop-filter: blur(10px);
 
+    background-color: transparent;
+    backdrop-filter: blur(10px);
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .fa-spinner {
+        color: $footer-bg;
+    }
 }
 </style>
 

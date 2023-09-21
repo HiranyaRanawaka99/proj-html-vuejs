@@ -6,7 +6,7 @@ export default {
   },
 
   props: {
-     buttonText: String
+     buttonText: String,
    },
 
   emits: ['click-me'],

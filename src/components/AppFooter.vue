@@ -14,8 +14,8 @@ export default {
           adress: 'Avenue d\'Auderghem 10',
           postalCode: '1040 Brussels, Belgium',
         }
-    ]
-  }
+      ]
+    }
   }
 }
 

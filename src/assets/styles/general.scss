@@ -1,7 +1,7 @@
 @use './Partial_scss/variable' as *;
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Quicksand Variable', sans-serif;
 
     section {
         margin: 2rem 7rem;
@@ -19,6 +19,15 @@ body {
 
     img {
         width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight:400;
     }
     
 }

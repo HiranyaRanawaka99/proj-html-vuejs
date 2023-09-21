@@ -31,7 +31,7 @@ export default {
 
 <template>
   <section class="working-process-title">
-    <h2> Working <em>process</em></h2>
+    <h2> Working <em><b>process</b></em></h2>
     <div class="working-process">
       <div class="process-icons">
         <div><font-awesome-icon icon="fa-solid fa-lightbulb" /></div>

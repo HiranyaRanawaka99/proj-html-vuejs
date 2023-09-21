@@ -17,14 +17,11 @@ export default {
 
 
 <template>
-
   <Slider></Slider>
   <Jumbotron></Jumbotron>
   <WorkingProcess></WorkingProcess>
   <WorkWithUs></WorkWithUs>
   <Articles></Articles>
-
-
 </template>
 
 

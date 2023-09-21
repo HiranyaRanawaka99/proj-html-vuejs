@@ -3,7 +3,6 @@
 import NextPrevButtons from '../partials/NextPrevButtons.vue';
 import BaseButtons from '../partials/BaseButtons.vue';
 
-const sliderCoverImage = document.getElementById('info');
 export default {
   data()  {
     return {
@@ -45,27 +44,26 @@ export default {
             this.activeSlide--
         }
     },
-    readMore() {
-        console.log('Apri pagina che contiene più informazioni')
+    autoPlayFunction () {
+        this.autoplay = setInterval (() => {
+        this.handleNext()
+        }, 3000);
+    },
+   
+   stopAutoPlayFunction () {
+        clearInterval(this.autoplay)
+   },
+   readMore() {
+       console.log('Apri pagina che contiene più informazioni')
     }
- },
-    // COMPONENTS
-    components: {NextPrevButtons, BaseButtons}
-    }
-    //     autoPlayFunction () {
-        //         this.autoplay = setInterval (() => {
-//             this.handleNext()
-//         }, 3000);
-//     },
-    
-//     stopAutoPlayFunction () {
-//         clearInterval(this.autoplay)
-//     },
-// },
+},
+
+// COMPONENTS
+components: {NextPrevButtons, BaseButtons}
+}
 
 
-// @mouseover = "stopAutoPlayFunction"
-// @mouseout = autoPlayFunction
+
 </script>
 
 
@@ -80,11 +78,15 @@ export default {
         ></NextPrevButtons>
         
         <!-- SLIDER COVER IMAGE -->
-        <div  class="infos" id="infos" :class= "(activeSlide == 0) ? 'd-block': 'd-none'">
+        <div  
+            :class= "(activeSlide == 0) ? 'd-block': 'd-none'"
+            @mouseover = "stopAutoPlayFunction()"
+            @mouseout = "autoPlayFunction()"
+            class="infos" >
             <div class="structure d-flex m-1">
             <!-- Cover text -->
                 <div class="infos-text col col-5 col-md-aut p-5">
-                    <h1> Devotion that <br> never <em>ends</em></h1>
+                    <h1> Devotion that <br> never <em><b>ends</b></em></h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum libero quaerat ratione molestias itaque. </p>
                     <!-- Button from emits -->
                     <BaseButtons

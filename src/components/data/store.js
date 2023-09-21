@@ -1,5 +1,5 @@
 
-import { markRaw, reactive } from 'vue';
+import { reactive } from 'vue';
 
 export const store = reactive({
     logoInfo: [
@@ -8,9 +8,7 @@ export const store = reactive({
             logoText: 'Let\'s get Creative',
             alt: 'marée-logo',
         },
-
     ]
-
 })
 
 export default store;

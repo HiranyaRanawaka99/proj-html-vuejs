@@ -23,7 +23,7 @@ export default {
 <template>
 <div class="work-with-us">
     <section class="contact-us">
-        <h2>Want to work with us? Send us<em> a message!</em></h2>
+        <h2>Want to work with us? Send us<em> <b> a message!</b></em></h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus alias optio repellat velit dignissimos sed doloremque rem perspiciatis porro illo ipsa, quibusdam distinctio inventore autem ad eos error, numquam eligendi.</p>
         <BaseButton
         buttonText="CONTACT"
