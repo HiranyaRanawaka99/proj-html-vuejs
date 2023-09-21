@@ -1,9 +1,20 @@
 <script>
+import BaseButton from '../partials/BaseButtons.vue';
 
 export default {
   data()  {
     return {}
-  }
+  },
+
+    // METHODS
+    methods: {
+        contactUs() {
+            console.log('Apri pagina forum');
+        }
+    },
+
+    // COMPONENTS
+    components: { BaseButton }
 }
 
 </script>
@@ -14,9 +25,11 @@ export default {
     <section class="contact-us">
         <h2>Want to work with us? Send us<em> a message!</em></h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus alias optio repellat velit dignissimos sed doloremque rem perspiciatis porro illo ipsa, quibusdam distinctio inventore autem ad eos error, numquam eligendi.</p>
-        <button class="btn-contact">CONTACT
-            <div class="hover-circle"></div>
-        </button>
+        <BaseButton
+        buttonText="CONTACT"
+        class="btn-contact"
+        @click-me="contactUs">
+    </BaseButton>
     </section>
 </div>
 
@@ -47,33 +60,10 @@ export default {
 
         position: relative;
 
-
         &:hover {
             background-color: $contact-btn-hover;
-            padding: .3rem 2.5rem 0 2.5rem;
         }
-
-        .hover-circle {
-            display: none;
-
-            height: 10px;
-            width: 10px;
-            border-radius: 50%;
-
-            background-color: $hover-cicle;
-
-            position: relative;
-            left: 70px;
-            bottom: 5px;
-            padding: 0;
-            margin: -0.16rem;
-        }
-
-        &:hover .hover-circle {
-            display: block;
-        }
-    }
-}
+    }}
 
 
 </style>

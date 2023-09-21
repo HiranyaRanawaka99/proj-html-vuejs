@@ -36,8 +36,9 @@ export default {
     border-radius: 50%;
     background-color: $next-prev;
     color: white;
+
     font-size: smaller;
-    
+
     width: 25px;
     height: 25px;
     
@@ -47,8 +48,6 @@ export default {
     position: absolute;
     top: 120px;
     
- 
-    
 }
 .btn-prev {
     left: -60px;
@@ -56,6 +55,34 @@ export default {
 
 .btn-next {
     left: 1050px;
+}
+
+@media screen and (max-width:768px) {
+.btn {
+border: none;
+border-radius: 50%;
+background-color: $next-prev;
+color: white;
+
+font-size: smaller;
+
+width: 25px;
+height: 25px;
+
+display: flex;
+justify-content: center;
+
+position: absolute;
+top: 120px;
+    
+}
+    .btn-prev {
+        left: -60px;
+    }
+
+    .btn-next {
+        left: 1050px;
+    }
 }
 
 
