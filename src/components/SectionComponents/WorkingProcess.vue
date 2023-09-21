@@ -30,17 +30,19 @@ export default {
 
 
 <template>
-  <section class="working-process">
+  <section class="working-process-title">
     <h2> Working <em>process</em></h2>
-    <div class="process-icons">
-      <div><font-awesome-icon icon="fa-solid fa-lightbulb" /></div>
-      <div><font-awesome-icon icon="fa-regular fa-comment" /></div>
-      <div><font-awesome-icon icon="fa-solid fa-cloud" /></div>   <div><font-awesome-icon icon="fa-solid fa-pen-clip" /></div>    
-    </div>
-    <div class="process-paragraph">
-      <div class="process-text" v-for="step in workingProcess">
-        <h6> {{ step.title }}</h6>
-        <p> {{ step.text }}</p>
+    <div class="working-process">
+      <div class="process-icons">
+        <div><font-awesome-icon icon="fa-solid fa-lightbulb" /></div>
+        <div><font-awesome-icon icon="fa-regular fa-comment" /></div>
+        <div><font-awesome-icon icon="fa-solid fa-cloud" /></div>   <div><font-awesome-icon icon="fa-solid fa-pen-clip" /></div>    
+      </div>
+      <div class="process-paragraph">
+        <div class="process-text" v-for="step in workingProcess">
+          <h6> {{ step.title }}</h6>
+          <p> {{ step.text }}</p>
+        </div>
       </div>
     </div>
   </section>
@@ -51,7 +53,7 @@ export default {
 @use '../../assets/styles/general.scss'; 
 @use '../../assets/styles/Partial_scss/variable' as *;
 
-.working-process {
+.working-process-title {
   text-align: center;
   .process-icons, .process-paragraph {
     display: flex;
@@ -105,9 +107,36 @@ export default {
   p {
     color: $text-darkgrey;
   }
-
 }
 
+@media screen and (max-width:768px) {
+
+  .working-process-title {
+    padding: 0 2rem;
+    margin: 2rem 4rem;
+     > h2 {
+       margin-bottom: 2rem;
+     }
+     .working-process {
+       display: flex;
+       gap: 2rem; 
+      }
+      .process-icons {
+        background-image: none;
+        display: block !important;
+        > * {
+          margin-bottom: 2rem;
+        }
+      }
+      .process-paragraph {
+        display: block !important;
+        > * {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+}
+  
 
 
 </style>
